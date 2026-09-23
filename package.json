@@ -1,7 +1,16 @@
 {
   "name": "speech-therapy-tracker-web",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Luckee-Core/speech-therapy-tracker-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Luckee-Core/speech-therapy-tracker-web/issues"
+  },
+  "homepage": "https://github.com/Luckee-Core/speech-therapy-tracker-web#readme",
   "scripts": {
     "dev": "next dev --port 3010",
     "build": "next build",

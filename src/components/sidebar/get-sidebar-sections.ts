@@ -1,5 +1,6 @@
 import {
   DASHBOARD_PATH,
+  DOCS_PATH,
   SPEECH_THERAPY_CONSUMPTION_PATH,
   SPEECH_THERAPY_PATH,
   TUBE_FEED_PATH,
@@ -18,7 +19,10 @@ export type SidebarSection = {
 export const getSidebarSections = (): SidebarSection[] => [
   {
     title: 'Overview',
-    links: [{ name: 'Dashboard', href: DASHBOARD_PATH }],
+    links: [
+      { name: 'Dashboard', href: DASHBOARD_PATH },
+      { name: 'Docs', href: DOCS_PATH },
+    ],
   },
   {
     title: 'Nutrition',
