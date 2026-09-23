@@ -1,34 +1,25 @@
-# Next.js Template
+# Speech Therapy Tracker
 
-Bare Next.js app with **src/app**, **src/store**, and **src/utils**. Redux and Tailwind are wired; no entity/dashboard/API code.
+Next.js app for peg-tube consumption, speech exercises, and ice-cube counts. Pair with **speech-therapy-tracker-express-server** (port 3011), which reads the **same Postgres database as My Health**.
 
 ## Run
 
 ```bash
+cp .env.example .env.local
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3010](http://localhost:3010).
 
-## Architecture & agent rules
+## Screens
 
-Follow **`.cursor/rules/AGENTS.md`** and **`.cursor/architecture/`**.
+- `/` — dashboard (tube feed and today's exercises)
+- `/tube-feed` — formulas and pump snapshots
+- `/speech-therapy` — homework catalog and photo import
+- `/speech-therapy-exercise-detail-page` — one exercise
+- `/speech-therapy-consumption` — daily ice-cube counts
 
-| Rule | Summary |
-|------|---------|
-| Redux | **Zero selector functions** — `useAppSelector((s) => s.slice)` only; derive with `useMemo` |
-| Routes | **No `[id]`** — use static `/entity-detail-page` + `current*` in Redux |
-| Utils | **Generic** helpers (`date/`, `string/`) — not table-specific formatters |
+## Architecture
 
-## Layout
-
-- **src/app** — routes and layout
-- **src/store** — Redux (store, reducer, one minimal slice)
-- **src/utils** — shared utilities
-- **src/components** — shared UI (e.g. ReduxProvider)
-- **src/model** — add when you persist Express table entities ([011](./.cursor/architecture/011-domain-models.md))
-
-## As GitHub template
-
-Repo → Settings → General → check **Template repository**. Then use as `GITHUB_TEMPLATE_WEB` when creating new web repos from the panel.
+Follow `.cursor/rules/AGENTS.md` and `.cursor/architecture/`.

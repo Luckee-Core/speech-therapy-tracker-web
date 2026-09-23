@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js App",
-  description: "Next.js template with Redux and Tailwind",
+  title: "Speech Therapy Tracker",
+  description: "Peg-tube, speech exercises, and ice-cube tracking",
 };
 
 export default function RootLayout({
